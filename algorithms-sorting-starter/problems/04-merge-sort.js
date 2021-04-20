@@ -7,8 +7,6 @@ function merge(array1, array2) {
     const rightEl = array2[0]
     let nextEl;
 
-    console.log("left element: ",leftEl)
-    console.log("right element: ",rightEl)
     if(leftEl < rightEl){
       nextEl = array1.shift()
     }
@@ -17,7 +15,7 @@ function merge(array1, array2) {
       nextEl = array2.shift()
     }
     result.push(nextEl)
-    console.log("next element: ", nextEl)
+
   }
 
   return result.concat(array1).concat(array2);
