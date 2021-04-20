@@ -1,33 +1,30 @@
 // Implement Insertion Sort
 
-// function insertionSort(list) {
+function insertionSort(list) {
 
-//   for( let i=1; i<=list.length; i++){
-//     let temp = list[i];
-//     for( let j=i-1; j>=0; j--){
-//       if(list[i] < list[j]){
-//         list[j+1] = list[j];
-//         list[j]=temp;
-//       }
-//     }
-
-//   }
-//   return list;
-// }
-
-
-function insertionSort(list){
-  for(let i=1;i<list.length;i++){
-    for(let j=i;j>0;j--){
-      if(list[j]<list[j-1]){
-        const temp=list[j];
-        list[j]=list[j-1];
-        list[j-1]=temp
-      }
+  for( let i=1; i<=list.length; i++){
+    let temp = list[i];
+    for( let j=i-1; j>=0 && list[j]> temp; j--){
+        list[j+1] = list[j];
+        list[j]=temp;
     }
   }
   return list;
 }
+
+
+// function insertionSort(list){
+//   for(let i=1;i<list.length;i++){
+//     for(let j=i;j>0;j--){
+//       if(list[j]<list[j-1]){
+//         const temp=list[j];
+//         list[j]=list[j-1];
+//         list[j-1]=temp
+//       }
+//     }
+//   }
+//   return list;
+// }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // const insertionSort = (list) =>{
