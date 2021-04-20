@@ -15,7 +15,7 @@ function selectionSort(list) {
         minimum = j
       }
     }
-    swap(list, i, minimum);
+    swap(list, i, minimum); // after we find the min in the unsorted region, then swap
   }
   return list;
 }
